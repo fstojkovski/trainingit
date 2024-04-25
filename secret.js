@@ -1,2 +1,2 @@
-const DB_SECRET = 'mysecret'
-console.log(DB_SECRET)
+const DB_PASSWORD = 'mysecret'
+console.log(DB_PASSWORD)
