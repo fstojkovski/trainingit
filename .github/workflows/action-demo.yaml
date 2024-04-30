@@ -21,6 +21,9 @@ jobs:
         with:
           script: |
             const sourceBranch = context.payload.pull_request.head.ref;
+            if (sourceBranch === 'develop' || sourceBranch === 'dev') {
+              console.log('Hello from develop/dev branch 👋🏻')
+            }
             console.log(sourceBranch);
             
       - run: echo "🍏 This job's status is ${{ job.status }}."
