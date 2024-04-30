@@ -16,4 +16,11 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: GitHub Script
+        uses: actions/github-script@v7.0.1
+        with:
+          script: |
+            const sourceBranch = context.payload.pull_request.head.ref;
+            console.log(sourceBranch);
+            
       - run: echo "🍏 This job's status is ${{ job.status }}."
